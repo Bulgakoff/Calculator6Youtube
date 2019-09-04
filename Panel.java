@@ -13,16 +13,39 @@ public class Panel extends JPanel {
     private Font font = new Font("SANS_SERIF", Font.BOLD, 20);
     // 7 поле текста делаем и затем инит в конструкторе Panel
     private JTextField outPut = new JTextField();
-    private JButton backspace=new JButton("<");//11 объявили backspace
+    private JButton backspace=new JButton("<"), equ=new JButton("="),
+            plus=new JButton("+"),minus=new JButton("-"),multiply=new JButton("*"),
+    divid=new JButton("/"), pow=new JButton("^");//11 объявили backspace и другие кноп
     // делаем интим в конструкторе Panel
 
     public Panel() {//3 делаем простецкий конструктор
         setLayout(null);//эта команда даст размещать элементы везде
         setFocusable(true);//11 мы позволяем нанели забирать себе фокус
         grabFocus();//11 забираем фокус(запрашиваем)
-        backspace.setBounds(10,250,50,50);
-        backspace.setFont(font);
-        add(backspace);//просто добавляем backspace в панель
+
+        equ.setBounds(10,250,50,50);
+        equ.setFont(font);
+        add(equ);//просто добавляем equ в панель
+
+        plus.setBounds(10,250,50,50);
+        plus.setFont(font);
+        add(plus);//просто добавляем plus в панель
+
+        minus.setBounds(10,250,50,50);
+        minus.setFont(font);
+        add(minus);//просто добавляем minus в панель
+
+        multiply.setBounds(10,250,50,50);
+        multiply.setFont(font);
+        add(multiply);//просто добавляем multiply в панель
+
+        divid.setBounds(10,250,50,50);
+        divid.setFont(font);
+        add(divid);//просто добавляем divid в панель
+
+        pow.setBounds(10,250,50,50);
+        pow.setFont(font);
+        add(pow);//просто добавляем pow в панель
 
         /**
          * после остальных кнопок 0 инициализируем сами
